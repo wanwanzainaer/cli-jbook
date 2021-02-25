@@ -1,12 +1,19 @@
 {
-  "name": "local-api",
+  "name": "@jsnote-book/local-api",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "start": "tsc -w --preserveWatchOutput",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublishOnly": "tsc"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +27,6 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-proxy-middleware": "^1.0.6",
-    "local-client": "^0.1.0"
+    "@jsnote-book/local-client": "^0.1.0"
   }
 }
